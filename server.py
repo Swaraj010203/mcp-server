@@ -15,5 +15,8 @@ def multiply(a: float, b: float) -> float:
     return a * b
 
 if __name__ == "__main__":
-    # Local STDIO transport (for ChatGPT Desktop)
-    mcp.run()
+    mcp.run(
+        transport="websocket",
+        host="0.0.0.0",   # Allow external devices
+        port=5000         # Any port you want
+    )
